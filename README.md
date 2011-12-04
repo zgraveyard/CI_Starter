@@ -5,10 +5,10 @@ Additionally there's <a href="http://getsparks.org">Sparks</a> packages installe
 
 ## Sparks Packages
 
-1. Debug-Toolbar : <a href="http://getsparks.org/packages/Debug-Toolbar/versions/HEAD/show">1.0.4</a>
-2. Layout : <a href="http://getsparks.org/packages/layout/versions/HEAD/show">1.0.0</a>
+1. Debug-Toolbar : <a href="http://getsparks.org/packages/Debug-Toolbar/versions/HEAD/show">1.0.4</a> [ready to use]
+2. Layout : <a href="http://getsparks.org/packages/layout/versions/HEAD/show">1.0.0</a> [ready to use]
 3. ion_auth : <a href="http://getsparks.org/packages/ion_auth/versions/HEAD/show">2.0.9</a>
-4. assets : <a href="http://getsparks.org/packages/assets/versions/HEAD/show">0.6.3</a>
+4. assets : <a href="http://getsparks.org/packages/assets/versions/HEAD/show">0.6.3</a> [ready to use]
 5. curl : <a href="http://getsparks.org/packages/curl/versions/HEAD/show">1.2.0</a>
 
 
@@ -21,6 +21,7 @@ Additionally there's <a href="http://getsparks.org">Sparks</a> packages installe
 ## Documentation
 
 Set all your preferences for each package.
+
 In the config directory your will find a config file called 'application.php' try to edit it to fit your requirement.
 
 ## Directory structure example
