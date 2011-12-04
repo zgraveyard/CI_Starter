@@ -10,7 +10,12 @@
 |
 */
 
-
+$hook['display_override'][] = array(
+    'class'    => 'Layout',
+    'function' => 'output',
+    'filename' => 'Layout.php',
+    'filepath' => '../sparks/layout/1.0.0/libraries'
+);
 
 /* End of file hooks.php */
 /* Location: ./application/config/hooks.php */
