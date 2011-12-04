@@ -1,0 +1,39 @@
+# CodeIgniter Starting Point Project
+
+This is a simple CodeIgniter Starter project so that you can start working on Codeigniter as fast as you can.
+Additionally there's <a href="http://getsparks.org">Sparks</a> packages installed.
+
+## Sparks Packages
+
+1. Debug-Toolbar : <a href="http://getsparks.org/packages/Debug-Toolbar/versions/HEAD/show">1.0.4</a>
+2. Layout : <a href="http://getsparks.org/packages/layout/versions/HEAD/show">1.0.0</a>
+3. ion_auth : <a href="http://getsparks.org/packages/ion_auth/versions/HEAD/show">2.0.9</a>
+4. assets : <a href="http://getsparks.org/packages/assets/versions/HEAD/show">0.6.3</a>
+5. curl : <a href="http://getsparks.org/packages/curl/versions/HEAD/show">1.2.0</a>
+
+
+## Requirements
+
+1. PHP 5.1+
+2. CodeIgniter 2.1
+3. Directory structure for the assets files, with a writeable assets/cache directory
+
+## Documentation
+
+Set all your preferences for each package.
+In the config directory your will find a config file called 'application.php' try to edit it to fit your requirement.
+
+## Directory structure example
+
+	/application
+	/assets
+		/cache
+		/css
+		/images
+		/js
+	/sparks
+	/system
+	/tools
+	/user_guide
+
+
