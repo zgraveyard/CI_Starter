@@ -1,0 +1,17 @@
+Options +FollowSymLinks
+Options -Indexes
+RewriteEngine on
+RewriteBase /
+RewriteCond %{HTTP_HOST} !^www\.
+RewriteRule ^ http://www.%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+RedirectMatch 403 ^/(application\/cache|application\/logs|\.git).*$
+RewriteCond $1 !^(index\.php|assets|assets\/cache|assets\/images|assets\/css|assets\/js|robots\.txt|uploads)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} !=/favicon.ico
+RewriteRule ^(.*)$ index.php/$1 [L]
+AddType video/ogg .ogv
+AddType video/ogg .ogg
+AddType video/mp4 .mp4
+AddType video/webm .webm
+AddType application/x-shockwave-flash swf
