@@ -34,7 +34,7 @@ class MY_Controller extends CI_Controller {
         $this->load->spark('assets/0.6.3');
         $this->layout->set_layout_dir('views/themes/' . $this->theme . '/layouts/');
         $this->layout->set_layout('layout');
-        if($this->clean_output){
+        if(!$this->clean_output){
             $this->layout->disable_clean_output();
         }
     }
