@@ -38,4 +38,10 @@ In the config directory your will find a config file called 'application.php' tr
 	/user_guide
 
 
-Project URL : http://git.io/NrzCqA
+## Project URL : 
+http://git.io/NrzCqA
+
+## ToDO :
+1. add twitter <a href="https://github.com/twitter/bootstrap">bootstrap</a>.
+2. create a simple login/logout function
+3. add more documentation
