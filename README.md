@@ -49,5 +49,4 @@ In the config directory your will find a config file called 'application.php' tr
 http://git.io/NrzCqA
 
 ## ToDO :
-1. create a simple login/logout function
-2. add more documentation
+1. add more documentation & examples.
