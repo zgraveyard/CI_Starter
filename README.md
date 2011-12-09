@@ -12,6 +12,9 @@ Additionally there's <a href="http://getsparks.org">Sparks</a> packages installe
 5. curl : <a href="http://getsparks.org/packages/curl/versions/HEAD/show">1.2.0</a>
 
 
+## Others
+1. Twitter bootstrap : <a href="http://twitter.github.com/bootstrap/">bootstrap</a>.
+
 ## Requirements
 
 1. PHP 5.1+
