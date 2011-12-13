@@ -16,7 +16,8 @@
         <?php
         display_js(array('bootstrap-alerts.js', 'bootstrap-buttons.js',
             'bootstrap-dropdown.js', 'bootstrap-modal.js', 'bootstrap-twipsy.js',
-            'bootstrap-popover.js', 'bootstrap-scrollspy.js', 'bootstrap-tabs.js'));
+            'bootstrap-popover.js', 'bootstrap-scrollspy.js', 'bootstrap-tabs.js',
+            'script.js'));
         ?>
         <title>Welcome to CodeIgniter</title>
         <?php display_css(array('default/bootstrap.css', 'default/theme.css')); ?>

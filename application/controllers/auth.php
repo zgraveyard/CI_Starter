@@ -61,14 +61,14 @@ class Auth extends MY_Controller {
             $this->data['identity'] = array('name' => 'identity',
                 'id' => 'identity',
                 'type' => 'text',
-                'class'=>'input-small',
-                'placeholder'=>'User Name',
+                'class'=>'span7',
+                'placeholder'=>'User Name / Email Address',
                 'value' => $this->form_validation->set_value('identity'),
             );
             $this->data['password'] = array('name' => 'password',
                 'id' => 'password',
                 'type' => 'password',
-                'class'=>'input-small',
+                'class'=>'span7',
                 'placeholder'=>'Password'                
             );
 

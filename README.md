@@ -49,4 +49,5 @@ In the config directory your will find a config file called 'application.php' tr
 http://git.io/NrzCqA
 
 ## ToDO :
-1. add more documentation & examples.
+1. do more styling for the auth controller.
+2. add more documentation & examples.

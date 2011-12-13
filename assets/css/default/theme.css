@@ -57,3 +57,9 @@ p.footer{
 pre{
     display: none;
 }
+.center{
+    text-align: center;
+}
+div#login{
+    padding-top: 40px;
+}
