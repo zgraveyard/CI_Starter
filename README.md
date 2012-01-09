@@ -52,3 +52,4 @@ http://git.io/NrzCqA
 
 ## ToDO :
 1. add more documentation & examples.
+2. trying to integrate the <a href="http://s.zah.me/AFy8LM">jquery-ui-bootstrap</a>
