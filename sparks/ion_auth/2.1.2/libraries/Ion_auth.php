@@ -105,23 +105,31 @@ class Ion_auth
 			// Get user information
 			$user = $this->where($this->ci->config->item('identity', 'ion_auth'), $identity)->users()->row();  //changed to get_user_by_identity from email
 
-			$data = array(
-				'identity'		=> $user->{$this->ci->config->item('identity', 'ion_auth')},
-				'forgotten_password_code' => $user->forgotten_password_code
-			);
-
-			$message = $this->ci->load->view($this->ci->config->item('email_templates', 'ion_auth').$this->ci->config->item('email_forgot_password', 'ion_auth'), $data, true);
-			$this->ci->email->clear();
-			$this->ci->email->set_newline("\r\n");
-			$this->ci->email->from($this->ci->config->item('admin_email', 'ion_auth'), $this->ci->config->item('site_title', 'ion_auth'));
-			$this->ci->email->to($user->email);
-			$this->ci->email->subject($this->ci->config->item('site_title', 'ion_auth') . ' - Forgotten Password Verification');
-			$this->ci->email->message($message);
-
-			if ($this->ci->email->send())
+			if ($user) 
 			{
-				$this->set_message('forgot_password_successful');
-				return TRUE;
+				$data = array(
+					'identity'		=> $user->{$this->ci->config->item('identity', 'ion_auth')},
+					'forgotten_password_code' => $user->forgotten_password_code
+				);
+
+				$message = $this->ci->load->view($this->ci->config->item('email_templates', 'ion_auth').$this->ci->config->item('email_forgot_password', 'ion_auth'), $data, true);
+				$this->ci->email->clear();
+				$this->ci->email->set_newline("\r\n");
+				$this->ci->email->from($this->ci->config->item('admin_email', 'ion_auth'), $this->ci->config->item('site_title', 'ion_auth'));
+				$this->ci->email->to($user->email);
+				$this->ci->email->subject($this->ci->config->item('site_title', 'ion_auth') . ' - Forgotten Password Verification');
+				$this->ci->email->message($message);
+
+				if ($this->ci->email->send())
+				{
+					$this->set_message('forgot_password_successful');
+					return TRUE;
+				}
+				else
+				{
+					$this->set_error('forgot_password_unsuccessful');
+					return FALSE;
+				}
 			}
 			else
 			{
@@ -177,13 +185,13 @@ class Ion_auth
 			if ($this->ci->email->send())
 			{
 				$this->set_message('password_change_successful');
-			$this->ci->ion_auth_model->trigger_events(array('post_password_change', 'password_change_successful'));
+				$this->ci->ion_auth_model->trigger_events(array('post_password_change', 'password_change_successful'));
 				return TRUE;
 			}
 			else
 			{
 				$this->set_error('password_change_unsuccessful');
-			$this->ci->ion_auth_model->trigger_events(array('post_password_change', 'password_change_unsuccessful'));
+				$this->ci->ion_auth_model->trigger_events(array('post_password_change', 'password_change_unsuccessful'));
 				return FALSE;
 			}
 		}
@@ -198,7 +206,7 @@ class Ion_auth
 	 * @return void
 	 * @author Mathew
 	 **/
-	public function register($username, $password, $email, $additional_data, $group_name = false) //need to test email activation
+	public function register($username, $password, $email, $additional_data = array(), $group_name = array()) //need to test email activation
 	{
 		$this->ci->ion_auth_model->trigger_events('pre_account_creation');
 

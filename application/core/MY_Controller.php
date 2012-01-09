@@ -30,10 +30,12 @@ class MY_Controller extends CI_Controller {
             $this->load->library('console');
             $this->output->enable_profiler(true);
         }
+        $this->load->spark('mobiledetection/1.0.1');
         $this->load->spark('layout/1.0.0');
         $this->load->spark('assets/0.6.3');
         $this->layout->set_layout_dir('views/themes/' . $this->theme . '/layouts/');
-        $this->layout->set_layout('layout');
+        $layout_file = (!$this->mobiledetection->isMobile()) ? 'layout' : 'mobile_layout' ;
+        $this->layout->set_layout($layout_file);
         if(!$this->clean_output){
             $this->layout->disable_clean_output();
         }

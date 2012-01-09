@@ -1,0 +1,1 @@
+yes this is the mobile layout file
