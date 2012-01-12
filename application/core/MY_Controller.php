@@ -39,7 +39,7 @@ class MY_Controller extends CI_Controller {
         if(!$this->clean_output){
             $this->layout->disable_clean_output();
         }
-        $this->load->spark('ion_auth/2.0.9');
+        $this->load->spark('ion_auth/2.1.2');
         $this->load->library('ion_auth');
     }
 
