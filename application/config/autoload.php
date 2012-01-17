@@ -54,6 +54,8 @@ $autoload['packages'] = array();
 
 $autoload['libraries'] = array('form_validation');
 
+$autoload['sparks'] = array('mobiledetection/1.0.1','assets/0.6.3','layout/1.0.0','ion_auth/2.1.2');
+
 
 /*
 | -------------------------------------------------------------------
