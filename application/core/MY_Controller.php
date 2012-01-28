@@ -26,7 +26,7 @@ class MY_Controller extends CI_Controller {
         $this->debug = config_item('app_debug');
         $this->clean_output = config_item('app_clean_output');
         if ($this->debug) {
-            $this->load->spark('Debug-Toolbar/1.0.4');
+            $this->load->spark('Debug-Toolbar/1.0.7');
             $this->load->library('console');
             $this->output->enable_profiler(true);
         }

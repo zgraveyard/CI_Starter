@@ -1,17 +1,17 @@
 <style type="text/css">
-	#codeigniter-profiler { clear: both; background: #222; opacity: 0.45; padding: 0 5px; font-family: Helvetica, sans-serif; font-size: 10px !important; line-height: 12px; position: fixed; width: auto; min-width: 52em; max-width: 90%; z-index: 1000; }
-	#codeigniter-profiler:hover { background: #101010; opacity: 1.0; }
+	#codeigniter-profiler { clear: both; background: #FFF; opacity: 0.45; padding: 0 5px; font-family: Helvetica, sans-serif; font-size: 10px !important; line-height: 12px; position: fixed; width: auto; min-width: 69em; max-width: 90%; z-index: 1000; }
+	#codeigniter-profiler:hover { background: #F0F0F0; opacity: 1.0; }
 	
-	#codeigniter-profiler.bottom-right { bottom:0; right: 0; -webkit-border-top-left-radius: 7px; -moz-border-radius-topleft: 7px; border-top-left-radius: 7px; -webkit-box-shadow: -1px -1px 10px #222; -moz-box-shadow: -1px -1px 10px #222; box-shadow: -1px -1px 10px #222; }	
-	#codeigniter-profiler.bottom-left { bottom:0; top: auto; -webkit-border-top-right-radius: 7px; -moz-border-radius-topright: 7px; border-top-right-radius: 7px; -webkit-box-shadow: 1px -1px 10px #222; -moz-box-shadow: 1px -1px 10px #222; box-shadow: 1px -1px 10px #222; }
-	#codeigniter-profiler.top-left { top:0; left: 0; -webkit-border-bottom-right-radius: 7px; -moz-border-radius-bottomright: 7px; border-bottom-right-radius: 7px;-webkit-box-shadow: 1px 1px 10px #222; -moz-box-shadow: 1px 1px 10px #222; box-shadow: 1px 1px 10px #222; }	
-	#codeigniter-profiler.top-right { top: 0; right: 0; -webkit-border-bottom-left-radius: 7px; -moz-border-radius-bottomleft: 7px; border-bottom-left-radius: 7px; -webkit-box-shadow: -1px 1px 10px #222; -moz-box-shadow: -1px 1px 10px #222; box-shadow: -1px 1px 10px #222; }	
+	#codeigniter-profiler.bottom-right { bottom:0; right: 0; -webkit-border-top-left-radius: 7px; -moz-border-radius-topleft: 7px; border-top-left-radius: 7px; -webkit-box-shadow: -1px -1px 10px #C0C0C0; -moz-box-shadow: -1px -1px 10px #C0C0C0; box-shadow: -1px -1px 10px #C0C0C0; }	
+	#codeigniter-profiler.bottom-left { bottom:0; top: auto; -webkit-border-top-right-radius: 7px; -moz-border-radius-topright: 7px; border-top-right-radius: 7px; -webkit-box-shadow: 1px -1px 10px #C0C0C0; -moz-box-shadow: 1px -1px 10px #C0C0C0; box-shadow: 1px -1px 10px #C0C0C0; }
+	#codeigniter-profiler.top-left { top:0; left: 0; -webkit-border-bottom-right-radius: 7px; -moz-border-radius-bottomright: 7px; border-bottom-right-radius: 7px;-webkit-box-shadow: 1px 1px 10px #C0C0C0; -moz-box-shadow: 1px 1px 10px #C0C0C0; box-shadow: 1px 1px 10px #C0C0C0; }	
+	#codeigniter-profiler.top-right { top: 0; right: 0; -webkit-border-bottom-left-radius: 7px; -moz-border-radius-bottomleft: 7px; border-bottom-left-radius: 7px; -webkit-box-shadow: -1px 1px 10px #C0C0C0; -moz-box-shadow: -1px 1px 10px #C0C0C0; box-shadow: -1px 1px 10px #C0C0C0; }	
 	
-	.ci-profiler-box { padding: 10px; margin: 0 0 10px 0; max-height: 400px; overflow: auto; color: #fff; font-family: Monaco, 'Lucida Console', 'Courier New', monospace; font-size: 11px !important; }
+	.ci-profiler-box { padding: 10px; margin: 0 0 10px 0; max-height: 300px; overflow: auto; color: #fff; font-family: Monaco, 'Lucida Console', 'Courier New', monospace; font-size: 11px !important; }
 	.ci-profiler-box h2 { font-family: Helvetica, sans-serif; font-weight: bold; font-size: 16px !important; padding: 0; line-height: 2.0; }
 	
 	#ci-profiler-menu a:link, #ci-profiler-menu a:visited { display: inline-block; padding: 7px 0; margin: 0; color: #ccc; text-decoration: none; font-weight: lighter; cursor: pointer; text-align: center; width: 15.5%; border-bottom: 4px solid #444; }
-	#ci-profiler-menu a:hover, #ci-profiler-menu a.current { background-color: #222; border-color: #999; }
+	#ci-profiler-menu a:hover, #ci-profiler-menu a.current { background-color: #FFF; border-color: #999; }
 	#ci-profiler-menu a span { display: block; font-weight: bold; font-size: 16px !important; line-height: 1.2; }
 	
 	#ci-profiler-menu-time span, #ci-profiler-benchmarks h2 { color: #B72F09; }
@@ -22,11 +22,11 @@
 	#ci-profiler-menu-console span, #ci-profiler-console h2 { color: #5a8616; }
 	
 	#codeigniter-profiler table { width: 100%; }
-	#codeigniter-profiler table.main td { padding: 7px 15px; text-align: left; vertical-align: top; color: #aaa; border-bottom: 1px dotted #444; line-height: 1.5; background: #101010 !important; font-size: 12px !important; }
-	#codeigniter-profiler table.main tr:hover td { background: #292929 !important; }
+	#codeigniter-profiler table.main td { padding: 7px 15px; text-align: left; vertical-align: top; color: #000; line-height: 1; background: #F0F0F0 !important; font-size: 12px !important; }
+	#codeigniter-profiler table.main tr:hover td { background: #F9F9F9 !important; }
 	#codeigniter-profiler table.main code { font-family: inherit; padding: 0; background: transparent; border: 0; color: #fff; }
 	
-	#codeigniter-profiler table .hilight { color: #FFFD70 !important; }
+	#codeigniter-profiler table .hilight { color: #000D70 !important; }
 	#codeigniter-profiler table .faded { color: #aaa !important; }
 	#codeigniter-profiler table .small { font-size: 10px; letter-spacing: 1px; font-weight: lighter; }
 	
@@ -101,7 +101,7 @@ function remove_class(obj, clas){
 		<!-- Vars and Config -->
 		<?php if (isset($sections['http_headers']) || isset($sections['get']) || isset($sections['config']) || isset($sections['post']) || isset($sections['uri_string']) || isset($sections['controller_info'])) : ?>
 			<a href="#" id="ci-profiler-menu-vars" onclick="show('ci-profiler-vars', 'ci-profiler-menu-vars'); return false;">
-				<span>vars</span> &amp; Config
+				<span>Config</span> Config  &amp;  vars
 			</a>
 		<?php endif; ?>
 		
@@ -212,10 +212,11 @@ function remove_class(obj, clas){
 			<h2>Queries</h2>
 			
 			<?php if (is_array($sections['queries'])) : ?>
+				<?php ksort($sections['queries']); ?>
 				
 				<table class="main" cellspacing="0">
 				<?php foreach ($sections['queries'] as $key => $val) : ?>
-					<tr><td class="hilight"><?php echo $key ?></td><td><?php echo $val ?></td></tr>
+					<tr><td class="hilight"><?php echo $val[0] ?></td><td><?php echo $val[1] ?></td></tr>
 				<?php endforeach; ?>
 				</table>
 
@@ -263,8 +264,9 @@ function remove_class(obj, clas){
 						</table>
 		
 					<?php else : ?>
-		
-						<?php echo $sections[$section]; ?>
+						<table class="main">
+							<tr><td class="hilight"><?php echo lang('profiler_'. $section) ?></td><td><?php echo $sections[$section]; ?></td></tr>
+						</table>
 		
 					<?php endif; ?>
 				<?php endif; ?>
@@ -278,9 +280,10 @@ function remove_class(obj, clas){
 		<div id="ci-profiler-files" class="ci-profiler-box" style="display: none">
 			<h2>Loaded Files</h2>
 			
+			<table class="main">
 			<?php if (is_array($sections['files'])) : ?>
 				
-				<table class="main">
+				
 				<?php foreach ($sections['files'] as $key => $val) : ?>
 					<tr>
 						<td class="hilight">
@@ -289,13 +292,15 @@ function remove_class(obj, clas){
 						</td>
 					</tr>
 				<?php endforeach; ?>
-				</table>
+				
 
 			<?php else : ?>
-
-				<?php echo $sections['files']; ?>
+				<tr>
+					<td class="hilight"><?php echo $sections['files']; ?></td>
+				</tr>
 
 			<?php endif; ?>
+			</table>
 		</div>
 	<?php endif; ?>
 
@@ -307,7 +312,3 @@ function remove_class(obj, clas){
 <?php endif; ?>
 
 </div>	<!-- /codeigniter_profiler -->
-
-<pre>
-<?php //print_r($sections); ?>
-</pre>
