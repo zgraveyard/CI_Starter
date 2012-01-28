@@ -5,11 +5,11 @@ Additionally there's <a href="http://getsparks.org">Sparks</a> packages installe
 
 ## Sparks Packages
 
-1. Debug-Toolbar : <a href="http://getsparks.org/packages/Debug-Toolbar/versions/HEAD/show">1.0.4</a> [ready to use]
+1. Debug-Toolbar : <a href="http://getsparks.org/packages/Debug-Toolbar/versions/HEAD/show">1.0.7</a> [ready to use]
 2. Layout : <a href="http://getsparks.org/packages/layout/versions/HEAD/show">1.0.0</a> [ready to use]
 3. ion_auth : <a href="http://getsparks.org/packages/ion_auth/versions/HEAD/show">2.1.2</a> [ready to use]
 4. assets : <a href="http://getsparks.org/packages/assets/versions/HEAD/show">0.6.3</a> [ready to use]
-5. curl : <a href="http://getsparks.org/packages/curl/versions/HEAD/show">1.2.0</a>
+5. curl : <a href="http://getsparks.org/packages/curl/versions/HEAD/show">1.2.1</a>
 6. mobiledetection : <a href="http://getsparks.org/packages/mobiledetection/versions/HEAD/show">1.0.1</a> [ready to use*]
 
 *be sure to modify the MY_Controller.php if you want to stop your controller from checking if its a mobile on every request or if you want to redirect it to another site.
