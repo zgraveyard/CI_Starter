@@ -45,8 +45,8 @@ class Spark_type {
 
         @mkdir(SPARK_PATH); // Two steps for windows
         @mkdir(SPARK_PATH . "/$this->name");
-        $this->recurseMove($this->temp_path, $this->installation_path);
-        $this->rrmdir($this->temp_path);
+        Spark_utils::full_move($this->temp_path, $this->installation_path);
+        Spark_utils::remove_full_directory($this->temp_path);
         $this->installed_path = $this->installation_path;              
     }
 

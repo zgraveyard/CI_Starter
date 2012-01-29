@@ -1,4 +1,4 @@
-# CodeIgniter Starting Point Project
+# CodeIgniter [ 2.1 ] Starting Point Project
 
 This is a simple CodeIgniter Starter project so that you can start working on Codeigniter as fast as you can.
 Additionally there's <a href="http://getsparks.org">Sparks</a> packages installed.
@@ -20,8 +20,7 @@ Additionally there's <a href="http://getsparks.org">Sparks</a> packages installe
 ## Requirements
 
 1. PHP 5.1+
-2. CodeIgniter 2.1
-3. Directory structure for the assets files, with a writeable assets/cache directory
+2. Directory structure for the assets files, with a writeable assets/cache directory
 
 ## Documentation
 
@@ -33,9 +32,9 @@ In the config directory your will find a config file called 'application.php' tr
 
 	/application
 		/views
-                    /themes
-                        /Default
-                            /layouts
+            /themes
+            	/Default
+                	/layouts
 	/assets
 		/cache
 		/css
