@@ -2,3 +2,4 @@
 
 # Load the library when the spark is loaded
 $autoload['libraries'] = array('layout');
+$autoload['config'] = array('layout');

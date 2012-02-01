@@ -14,18 +14,15 @@
         <!-- loading the jquery from google CDN -->
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
         <?php
-        display_js(array('bootstrap-alerts.js', 'bootstrap-buttons.js',
-            'bootstrap-dropdown.js', 'bootstrap-modal.js', 'bootstrap-twipsy.js',
-            'bootstrap-popover.js', 'bootstrap-scrollspy.js', 'bootstrap-tabs.js',
-            'script.js'));
+        display_js(array('bootstrap.js','script.js'));
         ?>
         <title>Welcome to CodeIgniter</title>
-        <?php display_css(array('default/bootstrap.css', 'default/theme.css')); ?>
+        <?php display_css(array('default/bootstrap.css', 'default/theme.css','default/bootstrap.responsive.css')); ?>
     </head>
     <body>
 
-        <div class="topbar">
-            <div class="fill">
+        <div class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
                 <div class="container">
                     <a class="brand" href="https://github.com/linuxjuggler/CI_Starter">CI Starter</a>
                     <ul class="nav">
@@ -34,10 +31,10 @@
                         <li><a href="https://github.com/linuxjuggler/CI_Starter/issues" id="contact">Report Issue</a></li>
                     </ul>
                     <?php if (!$this->ion_auth->logged_in()): ?>
-                        <?= form_open("auth/login", array('class' => 'pull-right')); ?>
+                        <?= form_open("auth/login", array('class' => 'navbar-search pull-right')); ?>
                         <input class="input-small" type="text" name="identity" id="identity" placeholder="Username">
                         <input class="input-small" type="password" name="password" id="password" placeholder="Password">
-                        <button class="btn" type="submit">Sign in</button>
+                        <input class="btn" style="margin-top:0px;" type="submit" value="Sign in" />
                         <?= form_close(); ?>
                     <?php else: ?>
                         <div class="pull-right">
