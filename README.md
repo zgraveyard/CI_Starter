@@ -53,7 +53,6 @@ http://git.io/NrzCqA
 1. add more documentation & examples.
 2. trying to integrate the <a href="http://s.zah.me/AFy8LM">jquery-ui-bootstrap</a>
 
-## Updates:
-1. 01/02/2012 :
+## Updates [01/02/2012]:
 * update to the new Twitter bootstrap, which now has a responsive design.
 * fix a problem with the layout library which cause the layout not to be load ( something related to the hooks which can't be loaded from the sparks/layout/1.0.0/config direcctory ), so i had to move it to the main config directory.
