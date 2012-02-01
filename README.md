@@ -15,7 +15,8 @@ Additionally there's <a href="http://getsparks.org">Sparks</a> packages installe
 *be sure to modify the MY_Controller.php if you want to stop your controller from checking if its a mobile on every request or if you want to redirect it to another site.
 
 ## Others
-1. Twitter bootstrap : <a href="http://twitter.github.com/bootstrap/">bootstrap</a>.
+* Twitter bootstrap : <a href="http://twitter.github.com/bootstrap/">bootstrap</a>.
+* jQuery 1.7.1 : <a href="http://jquery.com">jQuery 1.7.1</a> from google CDN.
 
 ## Requirements
 
