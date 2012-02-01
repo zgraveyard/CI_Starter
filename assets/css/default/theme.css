@@ -4,7 +4,7 @@
 body {
     background-color: #fff;
     margin: 40px;
-    font: 13px/20px normal Helvetica, Arial, sans-serif;
+    font: 13px/20px normal 'Ubuntu Mono', sans-serif ,Arial, sans-serif;
     color: #4F5155;
     padding-top: 10px;
 }
@@ -26,7 +26,7 @@ h1 {
 }
 
 code {
-    font-family: Consolas, Monaco, Courier New, Courier, monospace;
+    /*font-family: Consolas, Monaco, Courier New, Courier, monospace;*/
     font-size: 12px;
     background-color: #f9f9f9;
     border: 1px solid #D0D0D0;
@@ -62,4 +62,7 @@ pre{
 }
 div#login{
     padding-top: 40px;
+}
+p{
+    font-family: 'Ubuntu Mono', sans-serif ,Arial, sans-serif;
 }

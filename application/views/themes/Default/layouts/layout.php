@@ -17,7 +17,8 @@
         display_js(array('bootstrap.js','script.js'));
         ?>
         <title>Welcome to CodeIgniter</title>
-        <?php display_css(array('default/bootstrap.css', 'default/theme.css','default/bootstrap.responsive.css')); ?>
+        <link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic,700italic&subset=latin,cyrillic-ext,greek-ext,greek,latin-ext,cyrillic' rel='stylesheet' type='text/css'>
+        <?php display_css(array('default/bootstrap.css','default/bootstrap.responsive.css','default/theme.css')); ?>
     </head>
     <body>
 
