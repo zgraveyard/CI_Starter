@@ -16,7 +16,7 @@ class Spark_source {
         $this->version_data = json_decode(@file_get_contents("http://$this->url/api/system/latest"));
         $this->version = $this->version_data->spark_manager;
         $this->warn_if_outdated();
-    }    
+    }
 
     function get_url()
     {
@@ -87,7 +87,7 @@ class Spark_source {
             return SPARK_VERSION;
         }
     }
- 
+
     private function get_spark($data)
     {
         if ($data->repository_type == 'hg') return Mercurial_spark::get_spark($data);

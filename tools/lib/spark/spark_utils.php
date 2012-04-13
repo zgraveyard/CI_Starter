@@ -54,7 +54,7 @@ class Spark_utils {
     {
         if (is_dir($dir))
         {
-            $objects = scandir($dir); 
+            $objects = scandir($dir);
             foreach ($objects as $object)
             {
                 if ($object != '.' && $object != '..')
@@ -66,14 +66,14 @@ class Spark_utils {
                     else
                     {
                         if ($vocally) self::notice("Removing $dir/$object");
-                        unlink($dir . '/' . $object); 
+                        unlink($dir . '/' . $object);
                     }
-                } 
-            } 
-            reset($objects); 
-            return rmdir($dir); 
-        } 
-    } 
+                }
+            }
+            reset($objects);
+            return rmdir($dir);
+        }
+    }
 
     static function notice($msg)
     {

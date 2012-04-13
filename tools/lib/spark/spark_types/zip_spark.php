@@ -12,7 +12,7 @@ class Zip_spark extends Spark_type {
     function location_detail()
     {
         return "ZIP archive at $this->archive_url";
-    } 
+    }
 
     private static function unzip_installed()
     {
@@ -22,7 +22,7 @@ class Zip_spark extends Spark_type {
     function retrieve()
     {
         file_put_contents($this->temp_file, file_get_contents($this->archive_url));
-        // Try a few ways to unzip 
+        // Try a few ways to unzip
         if (class_exists('ZipArchive'))
         {
             $zip = new ZipArchive;

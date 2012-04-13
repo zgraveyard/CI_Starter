@@ -44,4 +44,4 @@ And then you can load the package like so:
 
 Go to your favorite CI project, and run (must have CURL installed):
 
-    $ php -r "$(curl -fsSL http://www.getsparks.org/static/install.php)"    
+    $ php -r "$(curl -fsSL http://www.getsparks.org/static/install.php)"

@@ -4,7 +4,7 @@ require_once dirname(__FILE__) . '/spark_utils.php';
 require_once dirname(__FILE__) . '/spark_exception.php';
 require_once dirname(__FILE__) . '/spark_source.php';
 
-define('SPARK_VERSION', '0.0.7');
+define('SPARK_VERSION', '0.0.9');
 ! defined('SPARK_PATH') AND define('SPARK_PATH', './sparks');
 
 class Spark_CLI {
@@ -57,7 +57,7 @@ class Spark_CLI {
         // Get version data
         $source = $this->spark_sources[0];
         if (!$source) throw new Spark_exception('No sources listed - unsure how to upgrade');
-        if ($source->outdated()) // We have an acceptable version
+        if (!$source->outdated()) // We have an acceptable version
         {
            Spark_utils::warning('Spark manager is already up to date');
            return;
@@ -92,7 +92,7 @@ class Spark_CLI {
                 if (!is_dir(SPARK_PATH . "/$item/$ver") || $ver[0] == '.') continue;
                 Spark_utils::line("$item ($ver)");
             }
-        } 
+        }
     }
 
     private function version()
@@ -145,7 +145,7 @@ class Spark_CLI {
 
     private function remove($args)
     {
- 
+
         list($flats, $flags) = $this->prep_args($args);
 
         if (count($flats) != 1)
@@ -164,7 +164,7 @@ class Spark_CLI {
 
         if ($version == null && !array_key_exists('f', $flags))
         {
-            throw new Spark_exception("Please specify a version of remove all with -f");
+            throw new Spark_exception("Please specify a version (spark remove -v1.0.0 foo) or remove all with -f");
         }
 
         Spark_utils::notice("Removing $spark_name (" . ($version ? $version : 'ALL') . ") from $dir_to_remove");
@@ -172,11 +172,11 @@ class Spark_CLI {
         {
             Spark_utils::notice('Spark removed successfully!');
         }
-        else 
+        else
         {
             Spark_utils::warning('Looks like that spark isn\'t installed');
         }
-        // attempt to clean up - will not remove unless empty 
+        // attempt to clean up - will not remove unless empty
         @rmdir(SPARK_PATH . "/$spark_name");
     }
 
@@ -221,7 +221,7 @@ class Spark_CLI {
 
     private function reinstall($args)
     {
- 
+
         list($flats, $flags) = $this->prep_args($args);
 
         if (count($flats) != 1)
@@ -236,17 +236,17 @@ class Spark_CLI {
         {
             throw new Spark_exception("Please specify a version to reinstall, or use -f to remove all versions and install latest.");
         }
-        
+
         $this->remove($args);
         $this->install($args);
     }
 
     /**
      * Prepares the command line arguments for use.
-     * 
+     *
      * Usage:
      * list($flats, $flags) = $this->prep_args($args);
-     * 
+     *
      * @param   array   the arguments array
      * @return  array   the flats and flags
      */
@@ -262,7 +262,7 @@ class Spark_CLI {
             if (count($matches) != 3) continue;
             $matches[0][0] == '-' ? $flags[$matches[1][1]] = $matches[2] : $flats[] = $matches[0];
         }
-        
+
         return array($flats, $flags);
     }
 
